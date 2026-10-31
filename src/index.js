@@ -8,6 +8,12 @@ import connectDB from "./db/index.js";
 
 
 connectDB()
+.then(process.env.PORT || 8000,()=>{
+    consolel.og(` server is running at port :${process.env.PORT}`)
+})
+.catch((error) => {
+    console.log("Mongodb connection error", error)
+});
 
 
 
